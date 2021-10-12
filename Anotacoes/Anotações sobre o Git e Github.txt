@@ -1,0 +1,67 @@
+Gerar chave SSH:
+	1. Abrir Git Bash
+	2. $ ssh-keygen -t ed25519 -C user_email
+	3. $ cd /c/Users/Usuario/.ssh/
+	4. $ ls
+	5. A chave que vai usar no GitHub é a chave pública
+	6. Iniciar o ssh agent:
+	7. $ eval $(ssh-agent -s)
+	8. $ ssh-add chaveprivada
+
+Usando uma Token
+	1. Gerar uma token no site do Github
+	2. Utilizar a url https na hora de clonar um repositório adicionando o login e a token
+	3. Ex: https://login:token@github.com/usuario/repositorio.git
+
+Clonar repositório:
+	1. $ git clone caminho_do_repositorio
+
+Criando um repositório:
+	1. Abrir o Git Bash na pasta desejada
+	2. $ git init
+	3. $ git config --global user.email "email@email.com"
+	4. $ git config --global user.name "name"
+
+Adicionando arquivos ao git:
+	• $ git add nome_do_arquivo
+	• $ git add *
+	• $ git add .
+	• $git add -A
+
+Fazendo um commit:
+	1. $ git add *
+	2. $ git commit -m "mensagem"
+
+Monitorar o status dos arquivos:
+	1. git status
+
+Listar configurações do git:
+	1. $ git config --list
+	
+Alterar configuração do git:
+	• $ git config --global --unset user.email
+	• $ git config --global --unset user.name
+
+Inicializar um repositório remoto no github:
+	1. $ git remote add origin https://github.com/usuario/repositorio.git
+		a. $ git push origin master
+		b. $ git push -u origin master/main
+
+Listar repositórios remotos:
+	1. $ git remote -v
+
+Fazer um pash para um repositório remoto:
+	1. git push origin master/main
+
+Fazer um pull de um repositório remoto
+	1. git pull origin master/main
+
+Resolvendo conflitos:
+	1. Editar os arquivos e manter apenas as alterações desejadas
+	2. Fazer um commit:
+	3. $ git add .
+	4. $ git commit -m "mensagem"
+	5. $ git push origin master/main
+
+
+
